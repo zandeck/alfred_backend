@@ -29,6 +29,6 @@ pub fn initialize_app_state() -> Arc<AppState> {
 
     Arc::new(AppState {
         graphql_schema: schema,
-        r2d2_pool: Context { pool },
+        r2d2_pool: Context { pool, user: None },
     })
 }

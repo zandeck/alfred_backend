@@ -9,6 +9,7 @@ type Connection = ConnectionManager<PgConnection>;
 
 pub struct Context {
     pub pool: r2d2::Pool<Connection>,
+    pub user: Option<String>,
 }
 
 impl juniper::Context for Context {}
